@@ -26,10 +26,6 @@ npm install
 
 2. Start the server:
 ```bash
-# Development mode (with auto-restart)
-npm run dev
-
-# Production mode
 npm start
 ```
 
@@ -191,10 +187,3 @@ The API returns appropriate HTTP status codes and error messages:
 ## Data Storage
 
 This mock server uses in-memory storage (Map objects) for simplicity.
-
-## Development
-
-To run in development mode with auto-restart:
-```bash
-npm run dev
-```
