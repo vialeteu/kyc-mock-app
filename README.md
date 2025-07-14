@@ -5,7 +5,7 @@ A complete KYC (Know Your Customer) verification system with a React frontend an
 ## 🏗️ Project Structure
 
 ```
-kyc_mock_server/
+kyc-mock-app/
 ├── server/                 # Backend API Server
 │   ├── server.js          # Main server file
 │   ├── package.json       # Server dependencies
