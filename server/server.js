@@ -129,11 +129,20 @@ app.post('/api/users', async (req, res) => {
       });
     }
 
-    // Check if user already exists
+    // Check if user already exists by email
     if (users.has(email)) {
       return res.status(409).json({
         success: false,
         message: 'User with this email already exists'
+      });
+    }
+
+    // Check if phone number is already used by another user
+    const existingUserWithPhone = Array.from(users.values()).find(user => user.phone === phone);
+    if (existingUserWithPhone) {
+      return res.status(409).json({
+        success: false,
+        message: 'Phone number is already registered by another user'
       });
     }
 
